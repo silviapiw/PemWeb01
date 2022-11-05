@@ -6,7 +6,7 @@
         <style>
             body {
                 background-color: lightblue;
-                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
 
             h1 {
@@ -65,6 +65,39 @@
             #tombol {
                 text-align: center;
             }
+
+            .tebal {
+                font-weight: bold;
+            }
+
+            #miring {
+                font-style: italic;
+            }
+
+            table {
+                border-collapse: collapse;
+                border-color: royalblue;
+                width: 50%;
+                text-align: justify;
+            }
+
+            .td {
+                font-weight: bold;
+            }
+
+            .baris1 {
+                background-color: royalblue;
+                color: white;
+                font-weight: bold;
+            }
+
+            .baris2 {
+                background-color: lightsteelblue;
+            }
+
+            .baris3 {
+                background-color: white;
+            }
         </style>
         
     </head>
@@ -103,18 +136,60 @@ Daerah penghasil alpukat adalah Jawa Barat,Jawa Timur, sebagian Sumatera, Sulawe
         <p>
             <h3>Berikut khasiat buah Alpukat:</h3>
             <ol>
-                <li>Vitamin E, Memiliki anti aging yang bisa mendorong
-                    perawatan kulit alamai
+                <li><span class="tebal">Vitamin E</span>, Memiliki <span class="tebal" id="miring"> anti aging </span>yang bisa mendorong
+                    perawatan kulit alami
                 </li>
-                <li>Vitamin K, Membantu mencegah terjadinya osteoporosis</li>
-                <li>Viitamin B5, Membantu menurunkan tingkat stress, meringankan rasa sakit</li>
-                <li>Vitamin B6, Membantu treat diabetes, pendarahan menstruasi,
+                <li><span class="tebal">Vitamin K</span>, Membantu <span class="tebal">mencegah</span> terjadinya <span id="miring"> osteoporosis</span></li>
+                <li><span class="tebal">Viitamin B5</span>, Membantu <span class="tebal">menurunkan</span> tingkat stress, meringankan rasa sakit</li>
+                <li><span class="tebal">Vitamin B6</span>, Membantu <span class="tebal" id="miring">treat diabetes</span>, pendarahan menstruasi,
                     insomnia
                 </li>
             </ol>
         </p>
 
+        <table border="1" align="center">
+            <tr class="baris1">
+                <td>No</td>
+                <td>Jenis Alpukat</td>
+                <td>Harga 1 Kg</td>
+                <td>Harga 2 Kg</td>
+                <td>Harga 3 Kg</td>
+            </tr>
 
+            <tr class="baris2">
+                <td class="td">1</td>
+                <td>Alpukat Mentega</td>
+                <td>Rp. 35.000,-</td>
+                <td>Rp. 65.000,-</td>
+                <td>Rp. 90.000,-</td>
+            </tr>
+
+            <tr class="baris3">
+                <td class="td">2</td>
+                <td>Alpukat Miki</td>
+                <td>Rp. 50.000,-</td>
+                <td>Rp. 90.000,-</td>
+                <td>Rp. 135.000,-</td>
+            </tr>
+
+            <tr class="baris2">
+                <td class="td">3</td>
+                <td>Alpukat Aligator</td>
+                <td>Rp. 30.000,-</td>
+                <td>Rp. 55.000,-</td>
+                <td>Rp. 80.000,-</td>
+            </tr>
+
+            <tr class="baris3">
+                <td class="td">4</td>
+                <td>Alpukat Kendil</td>
+                <td>Rp. 40.000,-</td>
+                <td>Rp. 75.000,-</td>
+                <td>Rp. 100.000,-</td>
+            </tr>
+        </table>
+
+        <br>
         <div class="foto">
 
 <img src="images/alpukat_miki.png" alt="alpukat miki"/>
