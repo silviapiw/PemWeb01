@@ -1,0 +1,49 @@
+.yellow {
+    background-color: yellow;
+    border: 1px solid black;
+    margin: 10px;
+    width: 190px;
+    height: 70px;
+}
+
+.orange {
+    background-color: orangered;
+    width: 1120px;
+    height: 70px;
+    border: 1px solid black;
+    margin-left: 205px;
+}
+
+.green {
+    background-color: lightgreen;
+    border: 1px solid black;
+    margin: 10px;
+    margin-top: 15px;
+    width: 190px;
+    height: 450px;
+}
+
+.gray {
+    background-color: lightgray;
+    width: 915px;
+    height: 450px;
+    border: 1px solid black;
+    margin-left: 205px;
+}
+
+.skyblue {
+    background-color: skyblue;
+    width: 190px;
+    height: 450px;
+    border: 1px solid black;
+    margin-left: 930px;
+}
+
+.blue {
+    background-color: blue;
+    border: 1px solid black;
+    margin: 10px;
+    width: auto;
+    height: 60px;
+    margin-top: 15px;
+}
