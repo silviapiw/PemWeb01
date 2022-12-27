@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Form</title>
+<style>
+    body {
+    background: #3498db;
+    font-family: sans-serif;
+    }
+
+    h2 {
+    color: #fff;
+    }
+
+    .login {
+    padding: 16px;
+    margin: 32px auto;
+    width: 250px;
+    background: #fff;
+    box-shadow: 1px 1px 8px midnightblue;
+    border-radius: 3px;
+    }
+
+    label {
+    font-size: 10pt;
+    color: #555;
+    margin: auto;
+    }
+
+    .tombol {
+    background: #3498db;
+    color: #fff;
+    border: 0;
+    padding: 5px 8px;
+    }
+
+    .hasil_input{
+    width: 18%;
+    margin: 10px auto;
+    padding: 5px 30px;
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 8px midnightblue;
+    }
+
+</style>
+</head>
+<body>
+    <center><h2>FORM VALIDATION</h2></center>
+    <div class="login">
+        <form action="" method="post"></form>
+            <div class="container">
+                <label for="name">Nama Pelanggan:</label> <p id="nama" style="color:#FF0000; font-size: smaller;" ></p>
+                <input type="text" id="name"  required>
+                <p id="errName"></p>
+                <label for="email">Email:</label> <p id="emaill" style="color:#FF0000; font-size: smaller;"></p>
+                <input type="email" id="email" required><br>
+                <p id="errEmail"></p>
+                <label for="jam">Jam Keberangkatan:</label> <p id="jam2" style="color:#FF0000; font-size: smaller;"></p>
+                <input type="time" id="time" min="00:00" max="23.59" required>
+                <p id="errTime"></p>
+                <label for="tujuan">Tujuan Keberangkatan:</label> <p id="tujuan1" style="color:#FF0000; font-size: smaller;"></p>
+                <input type="text" id="dest" required>
+                <p id="errDest"></p>
+                <label for="tiket" class="">Jumlah Tiket</label><p id="tiket1" style="color:#FF0000; font-size: smaller;"></p>
+                <input type="number" id="num" required>
+                <p id="errNum"></p>
+                <button type="submit" id="submit" onclick="Submit()" class="tombol">Pesan Sekarang</button>
+            </div> 
+        </form>
+    </div>
+    <div class="hasil_input">
+        <h1 id="hasil"></h1>
+        <h3 id="hName"></h3>
+        <h3 id="hEmail"></h3>
+        <h3 id="hTime"></h3>
+        <h3 id="hDest"></h3>
+        <h3 id="hNum"></h3>
+    </div>
+
+    <script>
+        function Submit() {
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let time = document.getElementById('time').value;
+    let dest = document.getElementById('dest').value;
+    let num = document.getElementById('num').value;
+
+    let emailPatt = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+
+    if(name == ''){
+        document.getElementById('errName').innerHTML = 'Mohon isi data dengan benar'
+        return false;
+    } 
+    if(name.length > 30) {
+        document.getElementById('errName').innerHTML = 'Data maksimal 30 karakter'
+        return false;
+    } 
+    if(email == '') {
+        document.getElementById('errEmail').innerHTML = 'Mohon isi email dengan benar';
+        return false;
+    } 
+    if (!emailPatt.test(email)){ 
+        document.getElementById("errEmail").innerHTML = "Penulisan email harus menggunakan ( @ ) ";
+        return false;
+    }
+    if(time == '') {
+        document.getElementById('errTime').innerHTML = 'Mohon isi data dengan benar';
+        return false;
+    } 
+    if(dest == '') {
+        document.getElementById('errDest').innerHTML = 'Mohon tentukan tujuan keberangkatan';
+        return false;
+    } 
+    if(num == '') {
+        error = 'Jumlah tiket harus diisi!';
+        document.getElementById('errNum').innerHTML = 'Mohon masukan jumlah tiket';
+        return false;
+    } 
+    if(num < 1) {
+        document.getElementById('errNum').innerHTML = 'Jumlah tiket kurang dari batas minimal';
+        return false;
+    }
+    if(num > 10) {
+        document.getElementById('errNum').innerHTML = 'Jumlah tiket melebihi batas maksimal';
+        return false;
+    } else {
+        document.getElementById('hasil').innerHTML = 'Keterangan';
+        document.getElementById('hName').innerHTML = 'Nama : ' + name;
+        document.getElementById('hEmail').innerHTML = 'Email : ' + email;
+        document.getElementById('hTime').innerHTML = 'Jam Berangkat : ' + time;
+        document.getElementById('hDest').innerHTML = 'Destinasi : ' + dest;
+        document.getElementById('hNum').innerHTML = 'Jumlah Tiket : ' + num;
+        return false
+    }
+}
+    </script>
+</body>
+</html>
